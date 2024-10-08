@@ -1,0 +1,21 @@
+Jméno: České Dráhy
+Přijmení: Národní Dopravce
+Telefonní číslo: 000000000
+Email: cd@cd.cz
+
+Data:
+{
+  "firstName": "České Dráhy",
+  "lastName": "Národní Dopravce",
+  "city": "Praha",
+  "street": "Dopravní",
+  "houseNumber": "1",
+  "postalCode": "12300",
+  "country": "Česká republika",
+  "age": "100",
+  "gender": "Jiné",
+  "agreement": true,
+  "productName": "Země Půlnočního Slunce - přednáška",
+  "phone": "000000000",
+  "email": "cd@cd.cz"
+}

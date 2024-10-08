@@ -1,0 +1,21 @@
+Jméno: Michal
+Přijmení: Schneider
+Telefonní číslo: 705400819
+Email: noemiamisa@gmail.com
+
+Data:
+{
+  "firstName": "Michal",
+  "lastName": "Schneider",
+  "city": "Plzeň",
+  "street": "Masarykova",
+  "houseNumber": "567/22",
+  "postalCode": "312 00",
+  "country": "Česká republika",
+  "age": "15",
+  "gender": "Muž",
+  "agreement": true,
+  "productName": "Krajnou Mých Snů - přednáška",
+  "phone": "705400819",
+  "email": "noemiamisa@gmail.com"
+}

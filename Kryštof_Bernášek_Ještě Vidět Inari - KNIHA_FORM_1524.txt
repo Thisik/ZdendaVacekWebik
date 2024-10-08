@@ -1,0 +1,21 @@
+Jméno: Kryštof
+Přijmení: Bernášek
+Telefonní číslo: ‭+420 608 919 493‬
+Email: noemiamisa@gmail.com
+
+Data:
+{
+  "firstName": "Kryštof",
+  "lastName": "Bernášek",
+  "city": "Rokycany",
+  "street": "U Hřbitova",
+  "houseNumber": "137",
+  "postalCode": "34600",
+  "country": "Česká republika",
+  "age": "15",
+  "gender": "Muž",
+  "agreement": true,
+  "productName": "Ještě Vidět Inari - KNIHA",
+  "phone": "‭+420 608 919 493‬",
+  "email": "noemiamisa@gmail.com"
+}

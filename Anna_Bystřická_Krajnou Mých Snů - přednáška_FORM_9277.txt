@@ -1,0 +1,21 @@
+Jméno: Anna
+Přijmení: Bystřická
+Telefonní číslo: 724977947
+Email: bystricka.anna@seznam.cz
+
+Data:
+{
+  "firstName": "Anna",
+  "lastName": "Bystřická",
+  "city": "Plzeň",
+  "street": "Masarykova ",
+  "houseNumber": "22",
+  "postalCode": "31200",
+  "country": "Česká republika",
+  "age": "35",
+  "gender": "Žena",
+  "agreement": true,
+  "productName": "Krajnou Mých Snů - přednáška",
+  "phone": "724977947",
+  "email": "bystricka.anna@seznam.cz"
+}

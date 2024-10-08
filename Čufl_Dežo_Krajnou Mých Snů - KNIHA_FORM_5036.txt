@@ -1,0 +1,17 @@
+Jméno: Čufl
+Příjmení: Dežo
+
+Data:
+{
+  "firstName": "Čufl",
+  "lastName": "Dežo",
+  "city": "Plzeň",
+  "street": "Pod Vrchem",
+  "houseNumber": "11",
+  "postalCode": "31200",
+  "country": "Česká republika",
+  "age": "49",
+  "gender": "Muž",
+  "agreement": true,
+  "productName": "Krajnou Mých Snů - KNIHA"
+}

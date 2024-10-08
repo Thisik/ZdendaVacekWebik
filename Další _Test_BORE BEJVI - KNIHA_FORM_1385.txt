@@ -1,0 +1,21 @@
+Jméno: Další 
+Přijmení: Test
+Telefonní číslo: 705400819
+Email: m-turista@post.cz
+
+Data:
+{
+  "firstName": "Další ",
+  "lastName": "Test",
+  "city": "Testovací Obec",
+  "street": "Beta Testerů",
+  "houseNumber": "000",
+  "postalCode": "00000",
+  "country": "Testovací stát",
+  "age": "35",
+  "gender": "Jiné",
+  "agreement": true,
+  "productName": "BORE BEJVI - KNIHA",
+  "phone": "705400819",
+  "email": "m-turista@post.cz"
+}

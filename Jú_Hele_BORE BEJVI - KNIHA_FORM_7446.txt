@@ -1,0 +1,21 @@
+Jméno: Jú
+Přijmení: Hele
+Telefonní číslo: 99999999
+Email: noemiamisa@gmail.com
+
+Data:
+{
+  "firstName": "Jú",
+  "lastName": "Hele",
+  "city": "Karlovy Vary",
+  "street": "Ta Ulice",
+  "houseNumber": "0",
+  "postalCode": "4444444",
+  "country": "Česká republika",
+  "age": "92",
+  "gender": "Jiné",
+  "agreement": true,
+  "productName": "BORE BEJVI - KNIHA",
+  "phone": "99999999",
+  "email": "noemiamisa@gmail.com"
+}

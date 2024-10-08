@@ -1,0 +1,21 @@
+Jméno: Anna
+Přijmení: Fictumová
+Telefonní číslo: 606822381
+Email: jahodyjahody@seznam.cz
+
+Data:
+{
+  "firstName": "Anna",
+  "lastName": "Fictumová",
+  "city": "Stod",
+  "street": "Honezovice",
+  "houseNumber": "52",
+  "postalCode": "123 00",
+  "country": "Česká republika",
+  "age": "63",
+  "gender": "Žena",
+  "agreement": true,
+  "productName": "Krajnou Mých Snů - přednáška",
+  "phone": "606822381",
+  "email": "jahodyjahody@seznam.cz"
+}

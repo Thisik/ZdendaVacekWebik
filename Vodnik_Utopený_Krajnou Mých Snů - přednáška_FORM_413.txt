@@ -1,0 +1,21 @@
+Jméno: Vodnik
+Přijmení: Utopený
+Telefonní číslo: 705400819
+Email: m-turista@post.cz
+
+Data:
+{
+  "firstName": "Vodnik",
+  "lastName": "Utopený",
+  "city": "Ostrava",
+  "street": "Povodňová",
+  "houseNumber": "00",
+  "postalCode": "12345",
+  "country": "Česká republika",
+  "age": "73",
+  "gender": "Nechci uvádět",
+  "agreement": true,
+  "productName": "Krajnou Mých Snů - přednáška",
+  "phone": "705400819",
+  "email": "m-turista@post.cz"
+}

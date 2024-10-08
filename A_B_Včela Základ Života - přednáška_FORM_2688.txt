@@ -1,0 +1,21 @@
+Jméno: A
+Přijmení: B
+Telefonní číslo: 705400819
+Email: m-turista@post.cz
+
+Data:
+{
+  "firstName": "A",
+  "lastName": "B",
+  "city": "C",
+  "street": "D",
+  "houseNumber": "1",
+  "postalCode": "2",
+  "country": "E",
+  "age": "35",
+  "gender": "Nechci uvádět",
+  "agreement": true,
+  "productName": "Včela Základ Života - přednáška",
+  "phone": "705400819",
+  "email": "m-turista@post.cz"
+}

@@ -1,0 +1,21 @@
+Jméno: Zdenda
+Přijmení: Váček
+Telefonní číslo: 666666666
+Email: zd.vac@seznam.cz
+
+Data:
+{
+  "firstName": "Zdenda",
+  "lastName": "Váček",
+  "city": "Čižice",
+  "street": "Čižice",
+  "houseNumber": "E 22",
+  "postalCode": "123456",
+  "country": "Česká republika",
+  "age": "62",
+  "gender": "Muž",
+  "agreement": true,
+  "productName": "BORE BEJVI - KNIHA",
+  "phone": "666666666",
+  "email": "zd.vac@seznam.cz"
+}

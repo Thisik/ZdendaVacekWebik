@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>ZDENĚK VACEK</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="prepro.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="TOP">
+    <div class="notif" id="close1">
+<b>WEB SLAVÍ ZALOŽENÍ - SLEVY AŽ 40%</b>
+<button class="close-btn" onclick="closeDiv()">×</button>
+<script>
+    // Funkce pro zavření divu
+    function closeDiv() {
+        const div = document.getElementById('close1');
+        alert("Našim senzačním slevám stejně neunikneš :)")
+        div.style.display = 'none'; // Skryje div
+    }
+</script>
+
+
+    </div>
+<br>
+
+    <div id="nav1">
+       <br> <div class="nav-item"><a href="index.html"><img src="zdvac.png" alt="Zděnek Vacek"></a></div>
+            <div class="nav-item" id="SEARCH">
+                <input type="text" id="search-input" placeholder="SUPER PŘEDNÁŠKA">
+        <button id="search-button">Hledat</button>
+            </div>
+            
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+            <div class="nav-item" id="tybg"><h3><b><a href="prednasky.html" title="Zobrazit informace a možnosti objednání přednášek" style="text-decoration: none; font-size:large; color:rgb(0, 0, 0); ">PŘEDNÁŠKY</a></b></h3></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="nav-item" id="tybg"><h3><b><a href="knihy.html" title="Zobrazit informace a možnosti koupi knih" style="text-decoration: none; font-size:large; color: rgb(0, 0, 0); ">KNIHY</a></b></h3></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="nav-item" id="tybg"><h3><b><a href="#" title="Zobrazit informace a možnosti objednání střihu/natočení filmu/videa" style="text-decoration: none; font-size:large; color: rgb(0, 0, 0); ">FOTO</a></b></h3></div>
+            &nbsp;
+            <div class="nav-item"><div class="dropdown">
+                <button class="dropbtn" id="tybg">VÍCE</button>
+                <div class="dropdown-content">
+                  <a href="#">Tábory</a>
+                  <a href="#">O mně</a>
+                  <a href="javascript:alert('Tento web vytvořil Michal Schneider s podklady Zdeňka Vacka v roce 2024. Aktulání verze je Alpha 2.0.3')">O webu</a>
+                  <a href="hra.html">HRA</a>
+                </div>
+              </div></div>
+          
+            
+            <script src="script.js"></script>
+</div>
+</div>
+<div class="hacka" style="background-image: url(Baumit_Blog_vcela1.jpg);">
+    <h1 class="uzij">UŽIJ SI</h1>
+    <h1 id="typewriter" class="uzij"></h1>
+   
+    
+
+<div class="tlacidla">
+<button class="tlacenka" onclick="knihyredirect()"><h1>Objednat Knihu</h1><b>Kvalitní kniha za dobrou cenu spěchá k vám domů!</b></button>&nbsp;&nbsp;
+<button class="tlacenka" onclick="prednaskyredirect()"><h1>Objednat Film</h1><b>Ten nejlepší film nastříhaný v Hollywoodském programu již míří vzduchem až do vaší firmy!</b></button>&nbsp;&nbsp;
+<button class="tlacenka"><h1>Objednat Přednášku</h1><b>Přednáška o životě či přírodě od pana indiána?</b></button>&nbsp;&nbsp;
+</div>
+<br>
+<br>
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><footer style="color: white;">(C) Michal Schneider and Zdeněk Vacek 2024. All right reserved. Do not copy source code please.</footer> 
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,21 @@
+Jméno: Petr
+Přijmení: Rychlý
+Telefonní číslo: 705400819
+Email: noemiamisa@gmail.com
+
+Data:
+{
+  "firstName": "Petr",
+  "lastName": "Rychlý",
+  "city": "Kamenice",
+  "street": "Nemocniční",
+  "houseNumber": "33",
+  "postalCode": "123123",
+  "country": "Česká republika",
+  "age": "42",
+  "gender": "Nechci uvádět",
+  "agreement": true,
+  "productName": "Ještě Vidět Inari - KNIHA",
+  "phone": "705400819",
+  "email": "noemiamisa@gmail.com"
+}

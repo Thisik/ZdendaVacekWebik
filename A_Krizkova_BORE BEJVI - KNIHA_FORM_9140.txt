@@ -1,0 +1,21 @@
+Jméno: A
+Přijmení: Krizkova
+Telefonní číslo: 776041359
+Email: ahojkynoobexdlala@seznamek.cz
+
+Data:
+{
+  "firstName": "A",
+  "lastName": "Krizkova",
+  "city": "Město Touškov",
+  "street": "Město Touškov",
+  "houseNumber": "1",
+  "postalCode": "00000",
+  "country": "Česká republika",
+  "age": "86",
+  "gender": "Žena",
+  "agreement": true,
+  "productName": "BORE BEJVI - KNIHA",
+  "phone": "776041359",
+  "email": "ahojkynoobexdlala@seznamek.cz"
+}

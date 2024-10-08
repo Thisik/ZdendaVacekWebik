@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- import captcha css file (default basic layout) -->
+    <link href="/captcha/captcha.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONTAKTNÍ FORMULÁŘ - ZDENĚK VACEK</title>
+    <style>
+        /* Základní styly pro formulář */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select, input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            background-color: antiquewhite;
+            border-radius: 15px;
+        }
+        
+        input[type="text"]:hover, input[type="number"]:hover, input[type="email"]:hover, input[type=tel]:hover, select:hover, input:hover {
+            background-color: azure;
+        }
+        
+        input[type="text"]:valid, input[type="number"]:valid, input[type="email"]:valid, input[type=tel]:valid, select:valid, input:valid {
+            background-color: #4CAF50;
+        }
+        
+        /* Slider pro věk */
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px; /* Výška dráhy */
+            background: #ddd; /* Barva pozadí dráhy */
+            border-radius: 5px;
+            outline: none;
+            margin: 0; /* Pro jistotu odstraníme margin */
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #4CAF50; /* Barva kolečka */
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            top: -6px; /* Posunutí kolečka nahoru pro vycentrování */
+        }
+        
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #4CAF50; /* Barva kolečka */
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            top: -6px; /* Posunutí kolečka nahoru pro vycentrování */
+        }
+        
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px; /* Výška dráhy */
+            background: #2196F3; /* Barva dráhy */
+            border-radius: 5px;
+        }
+        
+        input[type="range"]::-moz-range-track {
+            width: 100%;
+            height: 8px; /* Výška dráhy */
+            background: #2196F3; /* Barva dráhy */
+            border-radius: 5px;
+        }
+        
+        .gender-options {
+            display: flex;
+            gap: 10px;
+        }
+
+        .gender-options label {
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .gender-options label:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Stylování tlačítka při nevalidních polích */
+#myForm button {
+    background-color: red; /* Výchozí červená barva */
+    border-radius: 15px;
+    color: white;
+    font-weight: 900;
+    margin: auto;
+    width: 50%;
+    border: 3px solid red; /* Červený rámeček */
+    padding: 10px;
+    cursor: pointer;
+}
+
+#myForm button.valid {
+    background-color: #4CAF50; /* Zelená barva, když jsou všechna pole validní */
+    border: 3px solid green; /* Zelený rámeček */
+}
+
+
+    </style>
+</head>
+<body>
+    <h1 id="main-title"></h1>
+    <h2 id="sub-title"></h2>
+
+    <h2>Formulář</h2>
+    <h3>VYPLŇ FORMULÁŘ U PŘÍSLUŠNÉHO PRODUKTU ČI HNED <a style="color: rgb(0, 0, 0); text-decoration-line:underline" href="mailto:zd.vac@seznam.cz?subject=Objednávka na webu Zdeněk Vacek&body=Dobrý%20den">PIŠ</a> NEBO <a style="color: black; text-decoration-line:underline" href="tel:+420605889550">VOLEJ</a>!</h3>
+    <h3><i>Tento formulář společně s tímto webem vytvořil Michal Schneider - univerzální formulář Michalova stylu v roce 2023 a web v roce 2024</i></h3>
+    <form id="myForm">
+        <input type="hidden" id="productName" name="productName" value="">
+
+        <!-- Jméno -->
+        <label for="firstName">Jméno:</label>
+        <input placeholder="John" type="text" id="firstName" name="firstName" required>
+
+        <!-- Příjmení -->
+        <label for="lastName">Přijmení:</label>
+        <input placeholder="Smith" type="text" id="lastName" name="lastName" required>
+
+        <!-- Obec -->
+        <label for="city">Obec:</label>
+        <input placeholder="Stověžov" type="text" id="city" name="city" list="cityList" required>
+        <datalist id="cityList">
+            <option value="Praha">
+            <option value="Brno">
+            <option value="Ostrava">
+            <option value="Plzeň">
+            <option value="Olomouc">
+            <option value="Karlovy Vary">
+            <option value="Ústí nad Labem">
+            <option value="Liberec">
+            <option value="České Budějovice">
+            <option value="Jihlava">
+            <option value="Zlín">
+            <option value="Pardubice">
+            <option value="Hradec Králové">
+        </datalist>
+
+        <!-- Ulice -->
+        <label for="street">Ulice:</label>
+        <input placeholder="Americká" type="text" id="street" name="street" required>
+
+        <!-- Číslo popisné (ČP) -->
+        <label for="houseNumber">Číslo popisné (ČP):</label>
+        <input placeholder="1" id="houseNumber" name="houseNumber" required>
+
+        <!-- PSČ -->
+        <label for="postalCode">PSČ:</label>
+        <input placeholder="12300" id="postalCode" name="postalCode" required>
+
+        <!-- Stát s našeptáváním -->
+        <label for="country">Stát:</label>
+        <input type="text" id="country" name="country" list="countryList" required>
+        <datalist id="countryList">
+            <option value="Česká republika">
+            <option value="SK">
+            <option value="PL">
+            <option value="A">
+            <option value="DE">
+        </datalist>
+
+        
+
+        <!-- Souhlas s podmínkami -->
+        <label><input type="checkbox" name="agreement" required> Souhlasím s <a href="podminky.txt">podmínkami</a></label>
+
+        <!-- Telefonní číslo -->
+        <label for="phone">Telefonní číslo:</label>
+        <input placeholder="+420123456789" type="tel" id="phone" name="phone" required>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input placeholder="example@domain.com" type="email" id="email" name="email" required>
+
+        <!-- Note-->
+        <label for="note">Poznámka k nákupu(nepovinné):</label>
+        <input placeholder="Např. Doručit do vlastních rukou" type="text" id="note" name="note" style="background-color: antiquewhite;">
+      
+            
+            
+            
+          
+      
+          <!-- import captcha js file (it uses web components) -->
+          <script src="/captcha/captcha.js"></script>
+
+        <!-- Tlačítko odeslat -->
+        <button type="submit" id="michaljede321">Odeslat</button>
+    </form>
+
+    <script>
+        // Funkce na získání parametru z URL
+        function getParameterByName(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramValue = urlParams.get(name);
+            console.log("Získaná hodnota parametru:", paramValue);
+            return paramValue;
+        }
+    
+        // Získáme parametr 'vec' z URL
+        const vec = getParameterByName('vec');
+    
+        // Kontrola, zda parametr nebyl null
+        if (vec) {
+            document.getElementById('main-title').textContent = vec;
+            document.getElementById('sub-title').textContent = 
+                "Vítáme vás v našem nedokončeném kontaktním formuláři. Chystáte se nezávazně zamluvit " 
+                + vec + ". Za to vám moc děkujeme. Prosíme vás o vyplnění tohoto rychlého formuláře. Hezký den :)";
+    
+            // Nastavení hodnoty skrytého inputu na název produktu
+            document.getElementById('productName').value = vec;
+        } else {
+            console.log("Parametr 'vec' nebyl nalezen.");
+        }
+    
+        
+
+        // JavaScript pro zpracování formuláře
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                city: document.getElementById('city').value,
+                street: document.getElementById('street').value,
+                houseNumber: document.getElementById('houseNumber').value,
+                postalCode: document.getElementById('postalCode').value,
+                country: document.getElementById('country').value,
+                agreement: document.querySelector('input[name="agreement"]').checked,
+                productName: document.getElementById('productName').value, // Přidání názvu produktu
+                phone: document.getElementById('phone').value, // Přidání telefonního čísla
+                email: document.getElementById('email').value // Přidání emailu
+            };
+
+            console.log("Data k odeslání:", formData);
+
+            fetch('http://192.168.0.157:4410', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Formulář byl úspěšně odeslán!");
+                console.log('Úspěšná odpověď:', data);
+                location.replace("index.html")
+            })
+            .catch((error) => {
+                console.error('Chyba:', error);
+            });
+        });
+
+        // Kontrola validace a změna barvy tlačítka
+        const form = document.getElementById('myForm');
+        const button = document.getElementById('michaljede321');
+    
+        function updateButtonState() {
+            // Zjistit, zda jsou všechna pole validní
+            const isValid = form.checkValidity();
+            if (isValid) {
+                button.classList.add('valid');
+                button.classList.remove('invalid');
+            } else {
+                button.classList.add('invalid');
+                button.classList.remove('valid');
+            }
+        }
+    
+        // Kontrola validity při načtení stránky
+        document.addEventListener('DOMContentLoaded', () => {
+            updateButtonState();
+        });
+    
+        // Kontrola validity při změně formuláře
+        form.addEventListener('input', () => {
+            updateButtonState();
+        });
+    </script>
+</body>
+</html>

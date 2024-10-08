@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>ZDENĚK VACEK</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="prepro.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    
+    
+<!-- Modální okno (overlay) -->
+<div class="overlay" id="overlay">
+    <div class="menu-content">
+        <span class="close-btn3" onclick="closeMenu()">&times;</span>
+        <h1>Nabídka</h1>
+        <ul>
+            <li><a href="knihy.html">Knihy</a></li>
+            <li><a href="prednasky.html">Přednášky</a></li>
+            <li><a href="filmy.html">Filmy</a></li>
+            <li><a href="javascript:alert('Zdenda Šaman Vacek má skvělé tábory, ale pro tento web zatím nejsou k dispozici. ')">Tábory</a></li>
+            <li><a href="javascript:alert('Tento web vytvořil Michal Schneider s podklady Zdeňka Vacka v roce 2024. Aktulání verze je Beta 2.1.3; Web je skoro celý responzivní. Verze responzivity je Alpha 0.0.2; Web dále využívá univerzální formulář od tvůrce tohoto webu, Michala Schneidera, takže ho můžete vidět i jinde. Hra vytvořena Michal Schneiderem a jeho kamarády ze studia na Scratchi - převedeno do HTML, CSS a JS pomocí TurboWarp. Logo vytvořil Michal Schneider v Canvě v roce 2024. Děkujeme Microsoftu za IDE VS Code. Animace by: \n Michal Schneider \n Animate.style')">O webu</a></li>
+            <li> <a href="hra.html">HRA</a></li>  
+        </ul>
+    </div>
+</div>
+
+<script>
+    // Funkce pro zobrazení nabídky
+function showMenu() {
+    var overlay = document.getElementById("overlay");
+    overlay.style.display = "flex"; // Zobrazení overlay
+    overlay.classList.remove("animate__backOutDown"); // Odstranění animace zavření
+    overlay.classList.add("animate__animated", "animate__backInDown"); // Přidání animace zobrazení
+}
+
+// Funkce pro zavření nabídky
+function closeMenu() {
+    var overlay = document.getElementById("overlay");
+    overlay.classList.remove("animate__backInDown"); // Odstranění animace zobrazení
+    overlay.classList.add("animate__animated", "animate__backOutDown"); // Přidání animace zavření
+    
+    // Po skončení animace skrytí overlay
+    overlay.addEventListener('animationend', () => {
+        overlay.style.display = "none"; // Skrytí overlay
+        overlay.classList.remove("animate__animated", "animate__backOutDown"); // Odstranění animace zavření
+    }, { once: true }); // Listener se aktivuje pouze jednou
+}
+
+</script>
+<div id="TOP">
+    <div class="notif" id="close1">
+<b>WEB SLAVÍ ZALOŽENÍ - SLEVY AŽ 40%</b>
+<button class="close-btn" onclick="closeDiv()">×</button>
+<script>
+    // Funkce pro zavření divu
+    function closeDiv() {
+        const div = document.getElementById('close1');
+        alert("Našim senzačním slevám stejně neunikneš :)")
+        div.style.display = 'none'; // Skryje div
+    }
+</script>
+
+
+    </div>
+<br>
+
+    <div id="nav1">
+       <br> <div class="nav-item"><a href="index.html"><img src="zdvac.png" alt="Zděnek Vacek" id="zdvacfoto"></a></div>
+            <div class="nav-item" id="SEARCH">
+                <input type="text" id="search-input" placeholder="SUPER PŘEDNÁŠKA">
+        <button id="search-button">Hledat</button>
+        <button id="clear-search" style="display:none;">Zavřít výsledky</button>
+        <div id="search-resultsBB" style="background-color: white; margin-top: 5px; width:250px"></div>
+        <div id="search-results324"></div>
+            </div>
+            <div id="results"></div>
+            <div id="modal123" class="modal123">
+                <div class="modal-content123">
+                    <span class="close123">&times;</span>
+                    <div id="modal-body123"></div>
+                </div>
+            </div>
+         
+            <!-- Tlačítko MENU pro mobilní zobrazení -->
+    <button id="navbtnm3" onclick="showMenu()">☰ MENU</button>
+
+    <!-- Tlačítko HLEDAT pro mobilní zobrazení -->
+    <button id="searchbtnmob3" onclick="search123()">🔍 Hledat</button>
+
+    
+    </div>
+            
+            
+              </div></div>
+          
+            
+            <script src="script.js"></script>
+</div>
+</div>
+<div class="hacka" style="background-image: url(Baumit_Blog_vcela1.jpg);">
+    <h1 class="uzij">UŽIJ SI</h1>
+    <h1 id="typewriter" class="uzij"></h1>
+   
+    
+
+<div class="tlacidla">
+
+<button type="button" class="tlacenka" id="b1"><h1>Objednat knihu</h1><b>Kvalitní kniha za dobrou cenu spěchá k vám domů!</b></button>&nbsp;&nbsp;
+<button type="button" class="tlacenka" onclick="filmyjedou()" id="prveka"><h1>Objednat film</h1><b>Film nastříhaný v hollywoodském programu</b></button>&nbsp;&nbsp;
+<button type="button" class="tlacenka" onclick="prednaskyredirect()" id="b3"><h1 style="font-size:xx-large; font-weight:bolder">Objednat přednášku</h1><b>Přednáška o životě či přírodě od zkušeného cestovatele?</b></button>&nbsp;&nbsp;
+</div>
+<a href="#TOP" style="text-decoration-line: none; color:white"><div class="upbtn">UP!</div></a></div>
+<br>
+
+<footer style="color: white; ">
+    <h1>VYPLŇ FORMULÁŘ U PŘÍSLUŠNÉHO PRODUKTU ČI HNED <a style="color: white; text-decoration-line:underline" href="mailto:zd.vac@seznam.cz?subject=Objednávka na webu Zdeněk Vacek&body=Dobrý%20den">PIŠ</a> NEBO <a style="color: white; text-decoration-line:underline" href="tel:+420605889550">VOLEJ</a>!</h1>
+    (C) Michal Schneider and Zdeněk Vacek 2024. All right reserved. Do not copy source code please. 
+
+</footer> 
+
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

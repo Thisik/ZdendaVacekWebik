@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>KRAJINOU MÝCH SNŮ - ZDENĚK VACEK</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    
+<!-- Modální okno (overlay) -->
+<div class="overlay" id="overlay">
+    <div class="menu-content">
+        <span class="close-btn3" onclick="closeMenu()">&times;</span>
+        <h1>Nabídka</h1>
+        <ul>
+            <li><a href="knihy.html">Knihy</a></li>
+            <li><a href="prednasky.html">Přednášky</a></li>
+            <li><a href="filmy.html">Filmy</a></li>
+            <li><a href="javascript:alert('Zdenda Šaman Vacek má skvělé tábory, ale pro tento web web zatím nejsou k dispozici. ')">Tábory</a></li>
+            <li><a href="javascript:alert('Tento web vytvořil Michal Schneider s podklady Zdeňka Vacka v roce 2024. Aktulání verze je Beta 2.1.3; Web je skoro celý responzivní. Verze responzivity je Alpha 0.0.2; Web dále využívá univerzální formulář od tvůrce tohoto webu, Michala Schneidera, takže ho můžete vidět i jinde. Hra vytvořena Michal Schneiderem a jeho kamarády ze studia na Scratchi - převedeno do HTML, CSS a JS pomocí TurboWarp. Logo vytvořil Michal Schneider v Canvě v roce 2024. Děkujeme Microsoftu za IDE VS Code. Animace by: \n Michal Schneider \n Animate.style')">O webu</a></li>
+            <li> <a href="hra.html">HRA</a></li>  
+        </ul>
+    </div>
+</div>
+<!-- Tlačítko MENU pro mobilní zobrazení -->
+<button id="navbtnm3" onclick="showMenu()">☰ MENU</button>
+<script>
+    // Funkce pro zobrazení nabídky
+function showMenu() {
+    var overlay = document.getElementById("overlay");
+    overlay.style.display = "flex"; // Zobrazení overlay
+    overlay.classList.remove("animate__backOutDown"); // Odstranění animace zavření
+    overlay.classList.add("animate__animated", "animate__backInDown"); // Přidání animace zobrazení
+}
+
+// Funkce pro zavření nabídky
+function closeMenu() {
+    var overlay = document.getElementById("overlay");
+    overlay.classList.remove("animate__backInDown"); // Odstranění animace zobrazení
+    overlay.classList.add("animate__animated", "animate__backOutDown"); // Přidání animace zavření
+    
+    // Po skončení animace skrytí overlay
+    overlay.addEventListener('animationend', () => {
+        overlay.style.display = "none"; // Skrytí overlay
+        overlay.classList.remove("animate__animated", "animate__backOutDown"); // Odstranění animace zavření
+    }, { once: true }); // Listener se aktivuje pouze jednou
+}
+
+</script>
+
+<div id="TOP">
+    <div class="notif" id="close1">
+<b>WEB SLAVÍ ZALOŽENÍ - SLEVY AŽ 40%</b>
+<button class="close-btn" onclick="closeDiv()">×</button>
+<script>
+    // Funkce pro zavření divu
+    function closeDiv() {
+        const div = document.getElementById('close1');
+        div.style.display = 'none'; // Skryje div
+    }
+</script>
+
+
+
+    </div>
+<br>
+
+<div id="nav1">
+    <br> <div class="nav-item"><a href="index.html"><img src="zdvac.png" alt="Zděnek Vacek"></a></div>
+         <div class="nav-item" id="SEARCH">
+             <input type="text" id="search-input" placeholder="SUPER PŘEDNÁŠKA">
+     <button id="search-button">Hledat</button>
+         </div>
+         
+         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+         <div class="nav-item" id="tybg"><h3><b><a href="prednasky.html" title="Zobrazit informace a možnosti objednání přednášek" style="text-decoration: none; font-size:large; color:rgb(0, 0, 0); ">PŘEDNÁŠKY</a></b></h3></div>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <div class="nav-item" id="tybg"><h3><b><a href="knihy.html" title="Zobrazit informace a možnosti koupi knih" style="text-decoration: none; font-size:large; color: rgb(0, 0, 0); ">KNIHY</a></b></h3></div>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <div class="nav-item" id="tybg"><h3><b><a href="#" title="Zobrazit informace a možnosti objednání střihu/natočení filmu/videa" style="text-decoration: none; font-size:large; color: rgb(0, 0, 0); ">FOTO</a></b></h3></div>
+         &nbsp;
+         <div class="nav-item"><div class="dropdown">
+             <button class="dropbtn" id="tybg">VÍCE</button>
+             <div class="dropdown-content">
+               <a href="#">Tábory</a>
+               <a href="#">O mně</a>
+               <a href="javascript:alert('Tento web vytvořil Michal Schneider s podklady Zdeňka Vacka v roce 2024. Aktulání verze je Alpha 2.0.3')">O webu</a>
+               <a href="hra.html">HRA</a>
+            </div>
+           </div></div>
+       
+         
+         <script src="script.js"></script>
+</div>
+</div>
+<br><br><br>
+<div class="nabidkak">
+<br><br><br><br>
+<div class="filmybox"><h1 id="kmsh1">FILM A FOTO</h1>
+<h3>FOTOPRÁCE</h3>
+<p>
+<ul>
+<li>reklamní a propagační fotografie</li>
+<li>svatby, oslavy, koncerty a jiné dokumentační práce</li>
+</ul>
+
+</p>
+<br>
+<h3>FILMOVÉ A STŘIHOVÉ PRÁCE</h3>
+<p>
+   <ul>
+    <li>krátké reklamní a propagační filmy</li>
+    <li>nafilmuji a sestříhám svatby, oslavy, koncerty, klipy a další akce</li>
+    <li>sestříhám vaše filmy z dovolené, narozenin nebo jiných oslav </li>
+
+   </ul> 
+
+
+
+
+
+
+</p>
+
+
+
+    
+</div> <br><br><br><br>
+<div class="fotka" style="display: block; margin-left: auto; margin-right: auto; width: 50%; cursor:pointer; padding-top: 10px; border-radius:20px;" onclick="location.replace('fotky/KMSBG2.jpeg')"><img src="fotky/KMSBG2.JPEG" style="border-radius: 20px;"></div>
+
+<br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</div>
+<br> <br><footer style="color: white;">(C) Michal Schneider and Zdeněk Vacek 2024. All right reserved. Do not copy source code please.</footer> 
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

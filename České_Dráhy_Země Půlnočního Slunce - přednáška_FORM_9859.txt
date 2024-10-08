@@ -1,0 +1,19 @@
+Jméno: České
+Přijmení: Dráhy
+Telefonní číslo: 0000000000
+Email: cd@cd.cz
+
+Data:
+{
+  "firstName": "České",
+  "lastName": "Dráhy",
+  "city": "Praha",
+  "street": "Dopravní",
+  "houseNumber": "00",
+  "postalCode": "00000",
+  "country": "Česká republika",
+  "agreement": true,
+  "productName": "Země Půlnočního Slunce - přednáška",
+  "phone": "0000000000",
+  "email": "cd@cd.cz"
+}

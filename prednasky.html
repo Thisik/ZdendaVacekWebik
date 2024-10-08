@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>PŘEDNÁŠKY - ZDENĚK VACEK</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+        
+<!-- Modální okno (overlay) -->
+<div class="overlay" id="overlay">
+    <div class="menu-content">
+        <span class="close-btn3" onclick="closeMenu()">&times;</span>
+        <h1>Nabídka</h1>
+        <ul>
+            <li><a href="knihy.html">Knihy</a></li>
+            <li><a href="prednasky.html">Přednášky</a></li>
+            <li><a href="filmy.html">Filmy</a></li>
+            <li><a href="javascript:alert('Zdenda Šaman Vacek má skvělé tábory, ale pro tento web web zatím nejsou k dispozici. ')">Tábory</a></li>
+            <li><a href="javascript:alert('Tento web vytvořil Michal Schneider s podklady Zdeňka Vacka v roce 2024. Aktulání verze je Beta 2.1.3; Web je skoro celý responzivní. Verze responzivity je Alpha 0.0.2; Web dále využívá univerzální formulář od tvůrce tohoto webu, Michala Schneidera, takže ho můžete vidět i jinde. Hra vytvořena Michal Schneiderem a jeho kamarády ze studia na Scratchi - převedeno do HTML, CSS a JS pomocí TurboWarp. Logo vytvořil Michal Schneider v Canvě v roce 2024. Děkujeme Microsoftu za IDE VS Code. Animace by: \n Michal Schneider \n Animate.style')">O webu</a></li>
+            <li> <a href="hra.html">HRA</a></li>  
+        </ul>
+    </div>
+</div>
+
+<script>
+    // Funkce pro zobrazení nabídky
+function showMenu() {
+    var overlay = document.getElementById("overlay");
+    overlay.style.display = "flex"; // Zobrazení overlay
+    overlay.classList.remove("animate__backOutDown"); // Odstranění animace zavření
+    overlay.classList.add("animate__animated", "animate__backInDown"); // Přidání animace zobrazení
+}
+
+// Funkce pro zavření nabídky
+function closeMenu() {
+    var overlay = document.getElementById("overlay");
+    overlay.classList.remove("animate__backInDown"); // Odstranění animace zobrazení
+    overlay.classList.add("animate__animated", "animate__backOutDown"); // Přidání animace zavření
+    
+    // Po skončení animace skrytí overlay
+    overlay.addEventListener('animationend', () => {
+        overlay.style.display = "none"; // Skrytí overlay
+        overlay.classList.remove("animate__animated", "animate__backOutDown"); // Odstranění animace zavření
+    }, { once: true }); // Listener se aktivuje pouze jednou
+}
+
+</script>
+<div id="TOP">
+    <div class="notif" id="close1">
+<b>WEB SLAVÍ ZALOŽENÍ - SLEVY AŽ 40%</b>
+<button class="close-btn" onclick="closeDiv()">×</button>
+<script>
+    // Funkce pro zavření divu
+    function closeDiv() {
+        const div = document.getElementById('close1');
+        div.style.display = 'none'; // Skryje div
+    }
+</script>
+
+
+    </div>
+<br>
+
+<div id="nav1">
+    <br> <div class="nav-item"><a href="index.html"><img src="zdvac.png" alt="Zděnek Vacek"></a></div>
+         <div class="nav-item" id="SEARCH">
+             <input type="text" id="search-input" placeholder="SUPER PŘEDNÁŠKA">
+     <button id="search-button">Hledat</button>
+         </div>
+         
+        <!-- Tlačítko MENU pro mobilní zobrazení -->
+    <button id="navbtnm3" onclick="showMenu()">☰ MENU</button>
+        
+           <div id="search-results324"></div>
+        </div>
+        <div id="results"></div>
+        <div id="modal123" class="modal123">
+            <div class="modal-content123">
+                <span class="close123">&times;</span>
+                <div id="modal-body123"></div>
+            </div>
+        </div>
+    <!-- Tlačítko HLEDAT pro mobilní zobrazení -->
+    <button id="searchbtnmob3" onclick="search123()">🔍 Hledat</button>
+         
+         <script src="script.js"></script>
+</div>
+</div>
+<br><br><br>
+<div class="nabidkak">
+<br><br><br><br>
+<div class="itemnabk2"><a href="KMSpre.html" style="text-decoration: none; color:black;"><img alt="Krajinou Mých Snů - přednáška" src="KMSPRE.jpg" height="222px" width="170px" id="bejvi"><h2><a href="KMSpre.html" style="text-decoration: none; color:black;">Krajinou mých snů</a></h2></a><i style="margin-left: 15px; margin-right:15px"> Cestovat po USA bez řidičského průkazu, mobilního telefonu a kreditiní karty, přinese více dobrodružství, než by člověk očekával. Když vám ale pomůže anděl strážný, všechno dopadne lépe než si vůbec dokážete představit. 
+  </i><br><button id="chciknihu" onclick="KMSPREchci()">Tu chci!</button></div>
+    <div class="itemnabk2"><a href="VZZ.html" style="text-decoration: none; color:black;"><img alt="Včela Základ Života - přednáška"  src="beepre.jpg" height="222px" width="170px" id="bejvi"><h2><a href="VZZ.html" style="text-decoration: none; color:black;">Včela základ života</a></h2></a><i style="margin-left: 10px; margin-right:10px"> Přednáška Včela základ života je určena pro žáky ZŠ a starší děti MŠ. Je vždy přizpůsobena věku školáků ve třídě. Tématem je důležitost včel pro člověka a celého života na Zemi.  Žáci se dozví přes různé zajímavosti...
+        </i><br><button id="chciknihu" onclick="VZZchci()">Tu chci!</button></div>
+        <div class="itemnabk2"><a href="ZPSpre1.html" style="text-decoration: none; color:black;"><img alt="Země Půlnočního Slunce - přednáška" src="ZPSpre.jpg" height="222px" width="170px" id="bejvi"><h2><a href="ZPSpre1.html" style="text-decoration: none; color:black;">Zěmě Půlnočního Slunce</a></h2></a><i style="margin-left: 10px; margin-right:10px; font-size:x-small">Vyprávění z pěti cest autostopem po nejodlehlejších oblastech Norska, Švédska a Finska za polárním kruhem. Setkáme se i s národem Sämi, který tam žije přes 12 tisíc let. Podíváme se na Lofotské ostrovy, překrásné norské fjordy, procestujeme neobydlenou tajgu a tundru až k ruské hranic, kde se nachází největší jezero Inari  a zavítáme i na nejsevernější bod Evropy Nordkapp. 
+             </i><br><button id="chciknihu" onclick="ZPSprechci()">Tu chci!</button></div>
+<br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</div>
+<br> <br><footer style="color: white;">(C) Michal Schneider and Zdeněk Vacek 2024. All right reserved. Do not copy source code please.</footer> 
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

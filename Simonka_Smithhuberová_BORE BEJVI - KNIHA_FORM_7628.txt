@@ -1,0 +1,21 @@
+Jméno: Simonka
+Přijmení: Smithhuberová
+Telefonní číslo: 123456789
+Email: simonka.verunka123xd@mujmail.cz
+
+Data:
+{
+  "firstName": "Simonka",
+  "lastName": "Smithhuberová",
+  "city": "Vejprnice",
+  "street": "Krásná",
+  "houseNumber": "123",
+  "postalCode": "00000",
+  "country": "Česká republika",
+  "age": "25",
+  "gender": "Žena",
+  "agreement": true,
+  "productName": "BORE BEJVI - KNIHA",
+  "phone": "123456789",
+  "email": "simonka.verunka123xd@mujmail.cz"
+}

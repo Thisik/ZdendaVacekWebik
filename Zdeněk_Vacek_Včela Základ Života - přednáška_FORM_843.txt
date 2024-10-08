@@ -1,0 +1,21 @@
+Jméno: Zdeněk
+Přijmení: Vacek
+Telefonní číslo: 605889550
+Email: zd.vac@seznam.cz
+
+Data:
+{
+  "firstName": "Zdeněk",
+  "lastName": "Vacek",
+  "city": "Plzeň",
+  "street": "Lábkova",
+  "houseNumber": "55",
+  "postalCode": "318 00",
+  "country": "Česká republika",
+  "age": "58",
+  "gender": "Muž",
+  "agreement": true,
+  "productName": "Včela Základ Života - přednáška",
+  "phone": "605889550",
+  "email": "zd.vac@seznam.cz"
+}
