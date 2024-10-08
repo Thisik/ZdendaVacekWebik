@@ -1,5 +1,3 @@
-# .github/workflows/rosti_deploy.yml
-
 name: Deploy into Roští.cz
 
 on:
@@ -16,23 +14,30 @@ jobs:
         NODE_VERSION: 22.5.1
       steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: "v22.5.1"
-    - uses: webfactory/ssh-agent@v0.8.0
+
+      - uses: webfactory/ssh-agent@v0.8.0
         with:
-        ssh-private-key: ${{ secrets.ROSTI_DEPLOY_SSH_KEY }}
-    - name: Setup hostkey
+          ssh-private-key: ${{ secrets.ROSTI_DEPLOY_SSH_KEY }}
+
+      - name: Setup hostkey
         run: |
-        echo "ssh.rosti.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDj7TpLFb9ckA2H8o5/I+Iuzo/wcZuLvNhgWN/yF4nIZQqOVGLtaVVVE+UWCMRKM0p94vsV7D4vY7xB3D5L/Nl9Kb36tUhRKkcJ0EH0ASiqfLIbUvekV9qBOeCxzB/5+kCKh2U19RX5+B1EhAtiocD7mvywes37U+5zJy+X2BWeP4EQ0UfKxxZUFm1asPQ+WXbwYmyF1/u9rJW9kYSjy+UZNf5Xbp14wcx5lPavY5PkQ407aPt3/A3B6u6Dkrxg7g1SmFlfetMC1vPVD3n9P66nQMB+hAlpakoCe1tLfj6KHcjBnSaZnKCfltdelrisB/CDcNBpB25BvD/21MANTtXV" > ./known_hosts
-      - name: Dependencies
+          echo "ssh.rosti.cz ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDj7TpLFb9ckA2H8o5/I+Iuzo/wcZuLvNhgWN/yF4nIZQqOVGLtaVVVE+UWCMRKM0p94vsV7D4vY7xB3D5L/Nl9Kb36tUhRKkcJ0EH0ASiqfLIbUvekV9qBOeCxzB/5+kCKh2U19RX5+B1EhAtiocD7mvywes37U+5zJy+X2BWeP4EQ0UfKxxZUFm1asPQ+WXbwYmyF1/u9rJW9kYSjy+UZNf5Xbp14wcx5lPavY5PkQ407aPt3/A3B6u6Dkrxg7g1SmFlfetMC1vPVD3n9P66nQMB+hAlpakoCe1tLfj6KHcjBnSaZnKCfltdelrisB/CDcNBpB25BvD/21MANTtXV" > ./known_hosts
+
+      - name: Install dependencies
         run: |
           npm install
-      - name: Build
+
+      - name: Build the project
         run: |
           npm run build
           ./node_modules/.bin/next export
-      - name: Setup Nginx
+
+      - name: Setup Nginx config
         run: |
           cat << EOF > rosti.nginx.conf
           server {
@@ -42,15 +47,17 @@ jobs:
             index index.html;
 
             location / {
-              try_files $uri $uri/ =404;
+              try_files \$uri \$uri/ =404;
             }
-          }        
+          }
           EOF
           scp -o UserKnownHostsFile=./known_hosts -P $PORT rosti.nginx.conf $USER@$HOST:/srv/conf/nginx.d/app.conf
           rm rosti.nginx.conf
-      - name: Copy generated page
+
+      - name: Copy generated files to server
         run: |
           rsync -ave "ssh -o UserKnownHostsFile=./known_hosts -p $PORT" --delete-after --exclude=.git ./out/ $USER@$HOST:/srv/app/
-      - name: Apply changes to Nginx
+
+      - name: Reload Nginx
         run: |
           ssh -o UserKnownHostsFile=./known_hosts -p $PORT $USER@$HOST nginx -s reload
